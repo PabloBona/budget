@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Users</h1>
-
+<%= button_to "Logout", destroy_user_session_path, method: :delete %>
 
 
 <% if @users %>
