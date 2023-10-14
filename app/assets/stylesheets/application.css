@@ -8,7 +8,7 @@
   --light-fuente: 'proxima-nova', sans-serif
 }
 
-html {
+html, .bg-color {
   background-color: #F0F2F1;
 }
 
@@ -34,4 +34,50 @@ body {
 .snap {
   font-family: 'Pacifico', cursive;
   font-size: 3.5rem;
+}
+
+h2.log-title {
+  background-color: #3778c2;
+}
+
+.log-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.custom-input {
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.custom-input::placeholder {
+  color: #ccc;
+  padding: 0.5rem;
+}
+
+.log-input {
+  margin-top: 2rem;
+}
+
+.forgot-text {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.arrow-back {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.user-icon {
+  position: absolute;
+  margin-top: 85px;
+  background-color: transparent;
+  border: none;
 }
