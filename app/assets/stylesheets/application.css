@@ -17,7 +17,7 @@ body {
 }
 
 .title {
-  height: 70vh !important;
+  height: 60vh !important;
   background-color: #F0F2F1;
   font-family: var(--light-fuente);
 }
@@ -59,7 +59,7 @@ h2.log-title {
 }
 
 .log-input {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .forgot-text {
@@ -77,7 +77,8 @@ h2.log-title {
 
 .user-icon {
   position: absolute;
-  margin-top: 85px;
+  margin-top: 27px;
   background-color: transparent;
   border: none;
+  margin-left: 8px;
 }

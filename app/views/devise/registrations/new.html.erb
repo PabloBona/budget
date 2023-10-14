@@ -11,23 +11,21 @@
         <div class="text-center log-input">
           <div class="field input-group">
             <div class="input-group-prepend">
-              <span class="input-group-text">
-                <box-icon name='user-circle' type='solid' color='#ccc' class="user-icon"></box-icon>
-              </span>
-            </div>
+                 <box-icon name='user-circle' type='solid' color='#ccc' class="user-icon"></box-icon>
+             </div>
             <%= f.file_field :photo, autofocus: true, autocomplete: "photo", class: "custom-input custom-input-email px-5 py-4 rounded-0 w-100" %>
           </div>
 
           <div class="field">
-            <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "First Name" %>
+            <%= f.text_field :name, autocomplete: "name", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "First Name" %>
           </div>
 
           <div class="field">
-            <%= f.text_field :surname, autofocus: true, autocomplete: "surname", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "Last Name" %>
+            <%= f.text_field :surname, autocomplete: "surname", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "Last Name" %>
           </div>
 
           <div class="field">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "Email" %>
+            <%= f.email_field :email, autocomplete: "email", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "Email" %>
           </div>
 
           <div class="field">

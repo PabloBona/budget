@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col bg-color">
-      <h2 class="fs-6 log-title py-2 text-center text-white p-0">Log In</h2>
+      <h2 class="fs-6 log-title py-2 text-center text-white p-0">LOGIN</h2>
       <%= link_to root_path do %>
         <box-icon class="arrow-back" name='arrow-back' color='#fff'></box-icon>
       <% end %>
@@ -17,14 +17,14 @@
           </div>
 
           <div class="actions my-2 rounded">
-            <%= f.submit "Log in" %>
+            <%= f.submit "Log in", class: "btn btn-primary" %>
           </div>    
         <% end %>
       </div>
 
       <div class="text-center fs-6">
         <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-          <%= link_to "Forgot your password?", new_password_path(resource_name), class:"forgot-text" %><br />
+          <%= link_to "Forgot password ?", new_password_path(resource_name), class:"forgot-text" %><br />
         <% end %>
       </div>  
     </div>
