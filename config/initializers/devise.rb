@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Assuming you have not yet modified this file, each configuration option below
 # is set to its default value. Note that some are commented out while others
 # are not: uncommented lines are intended to protect your configuration from
@@ -124,9 +122,6 @@ Devise.setup do |config|
   # algorithm), the cost increases exponentially with the number of stretches (e.g.
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
   config.stretches = Rails.env.test? ? 1 : 12
-
-  # Set up a pepper to generate the hashed password.
-  # config.pepper = 'd38182c23c455e76b1e5277fa3f3becf6188d2aaa62334820c47f2b97083e6d2646f99fd16a13811f09d06f66782ce131af188730ed33002ec6af8bb51dc7a6e'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false

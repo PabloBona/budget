@@ -1,13 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@300;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 :root {
   --main: #3778c2;
-  --second: #f5b523;
+  --second: #5fb523;
   --color-text: #434b54;
   --bold-fuente: 'proxima-nova', sans-serif;
   --light-fuente: 'proxima-nova', sans-serif
 }
 
+html {
+  background-color: #F0F2F1;
+}
+
 body {
   font-family: var(--light-fuente);
+}
+
+.title {
+  height: 70vh !important;
+  background-color: #F0F2F1;
+  font-family: var(--light-fuente);
+}
+
+.user-btn a:hover{
+  background-color: var(--main);
+  color: white;
+}
+
+.user-btn a {
+  transition: background-color 1s, color 1s;
+}
+
+.snap {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5rem;
 }
