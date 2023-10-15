@@ -7,4 +7,5 @@
 <div>
   <%= link_to "Show this user", @user %> |
   <%= link_to "Back to users", users_path %>
+  <%= button_to "Destroy this user", @user, method: :delete %>
 </div>

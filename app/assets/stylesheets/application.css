@@ -93,4 +93,5 @@ h2.log-title {
   background: linear-gradient(87deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 5%, rgba(0,212,255,1) 100%);
   color: white;
   font-size: 16px;
+  height: 100vh;
 }

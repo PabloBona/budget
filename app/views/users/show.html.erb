@@ -17,22 +17,22 @@
     </div>
     <div class="mt-5">
       <ul class="list-unstyled">
-        <li class="d-flex gap-3"><box-icon name='cog' class="border rounded-circle" color='#ffffff' ></box-icon> Account settings</li>
+        <li class="d-flex gap-3">
+          <box-icon name='cog' class="border rounded-circle" color='#ffffff'></box-icon>
+          <%= link_to "Account settings", edit_user_path(@user), class: "text-decoration-none text-white cursor-pointer" %>
+        </li>
         <div class="mx-auto w-75"><hr class="text-ligth"></div>
+
         <li class="d-flex gap-3"><box-icon name='map' class="border rounded-circle" color='#ffffff' ></box-icon> Merchant Finder</li>
         <div class="mx-auto w-75"><hr class="text-ligth"></div>
         <li class="d-flex gap-3"><box-icon name='gift' class="border rounded-circle" color='#ffffff' ></box-icon> Claim Promo</li>
         <div class="mx-auto w-75"><hr class="text-ligth"></div>
         <li class="d-flex gap-3"><box-icon name='export' class="border rounded-circle" color='#ffffff' ></box-icon> Share Promo</li>
         <div class="mx-auto w-75"><hr class="text-ligth"></div>
- 
       </ul>
     </div>
     <div>
-      <%= link_to "Edit this user", edit_user_path(@user) %> |
-      <%= link_to "Back to users", users_path %>
-
-      <%= button_to "Destroy this user", @user, method: :delete %>
+        <%= link_to "Back to users", users_path %>
     </div>
   </div>
 
