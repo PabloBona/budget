@@ -8,10 +8,6 @@
   --light-fuente: 'proxima-nova', sans-serif
 }
 
-html, .bg-color {
-  background-color: #F0F2F1;
-}
-
 body {
   font-family: var(--light-fuente);
   padding-top: 1px;
@@ -90,4 +86,11 @@ h2.log-title {
   background-position: center; 
   height: 100px; 
   width: 100px;
+}
+
+.bg-user-show {
+  background: rgb(2,0,36);
+  background: linear-gradient(87deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 5%, rgba(0,212,255,1) 100%);
+  color: white;
+  font-size: 16px;
 }

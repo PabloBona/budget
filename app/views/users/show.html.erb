@@ -1,6 +1,5 @@
-<p style="color: green"><%= notice %></p>
-  <div class="container">
-    <div class="row">
+  <div class="container pt-4 bg-user-show">
+    <div class="row"> 
       <div class="col">
         <div class="d-flex justify-content-center my-2">
           <div class="rounded-circle text-center photo" style="background-image: url('<%= @user.photo.url %>')" >
@@ -12,16 +11,28 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="col text-center">
+      <h2><%= @user.name %></h2>
+    </div>
+    <div class="mt-5">
+      <ul class="list-unstyled">
+        <li class="d-flex gap-3"><box-icon name='cog' class="border rounded-circle" color='#ffffff' ></box-icon> Account settings</li>
+        <div class="mx-auto w-75"><hr class="text-ligth"></div>
+        <li class="d-flex gap-3"><box-icon name='map' class="border rounded-circle" color='#ffffff' ></box-icon> Merchant Finder</li>
+        <div class="mx-auto w-75"><hr class="text-ligth"></div>
+        <li class="d-flex gap-3"><box-icon name='gift' class="border rounded-circle" color='#ffffff' ></box-icon> Claim Promo</li>
+        <div class="mx-auto w-75"><hr class="text-ligth"></div>
+        <li class="d-flex gap-3"><box-icon name='export' class="border rounded-circle" color='#ffffff' ></box-icon> Share Promo</li>
+        <div class="mx-auto w-75"><hr class="text-ligth"></div>
+ 
+      </ul>
+    </div>
+    <div>
+      <%= link_to "Edit this user", edit_user_path(@user) %> |
+      <%= link_to "Back to users", users_path %>
 
+      <%= button_to "Destroy this user", @user, method: :delete %>
     </div>
   </div>
-  <div class="col text-center">
-    <h2><%= @user.name %></h2>
-  </div>
- 
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
 
-  <%= button_to "Destroy this user", @user, method: :delete %>
-</div>
