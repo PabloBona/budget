@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col bg-color">
+      <h2 class="fs-6 log-title py-2 text-center text-white p-0">LOGIN</h2>
+      <%= link_to root_path do %>
+        <box-icon class="arrow-back" name='arrow-back' color='#fff'></box-icon>
+      <% end %>
+
+      <div class="text-center log-input">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "Email" %>
+          </div>
+
+          <div class="field">
+            <%= f.password_field :password, autocomplete: "current-password", class: "custom-input custom-input-password w-100 rounded-0", placeholder: "Password" %>
+          </div>
+
+          <div class="actions my-2 rounded">
+            <%= f.submit "Log in", class: "btn btn-primary" %>
+          </div>    
+        <% end %>
+      </div>
+
+      <div class="text-center fs-6">
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <%= link_to "Forgot password ?", new_password_path(resource_name), class:"forgot-text" %><br />
+        <% end %>
+      </div>  
+    </div>
+  </div>
+</div>

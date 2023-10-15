@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+:root {
+  --main: #3778c2;
+  --second: #5fb523;
+  --color-text: #434b54;
+  --bold-fuente: 'proxima-nova', sans-serif;
+  --light-fuente: 'proxima-nova', sans-serif
+}
+
+body {
+  font-family: var(--light-fuente);
+  padding-top: 1px;
+}
+
+.title {
+  height: 60vh !important;
+  background-color: #F0F2F1;
+  font-family: var(--light-fuente);
+}
+
+.user-btn a:hover{
+  background-color: var(--main);
+  color: white;
+}
+
+.user-btn a {
+  transition: background-color 1s, color 1s;
+}
+
+.snap {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5rem;
+}
+
+h2.log-title {
+  background-color: #3778c2;
+}
+
+.log-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.custom-input {
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.custom-input::placeholder {
+  color: #ccc;
+  padding: 0.5rem;
+}
+
+.log-input {
+  margin-top: 3rem;
+}
+
+.forgot-text {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.arrow-back {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.user-icon {
+  position: absolute;
+  margin-top: 29px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.photo {
+  background-size: cover; 
+  background-position: center; 
+  height: 100px; 
+  width: 100px;
+}
+
+.bg-user-show {
+  background: rgb(2,0,36);
+  background: linear-gradient(87deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 5%, rgba(0,212,255,1) 100%);
+  color: white;
+  font-size: 16px;
+  height: 100vh;
+}
