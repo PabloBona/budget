@@ -11,39 +11,45 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="my-2">
     <%= form.label :photo, style: "display: block" %>
     <%= form.file_field :photo %> 
   </div>
   
-  <div>
+  <div class="my-2">
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
+  <div class="my-2">
     <%= form.label :birthday, style: "display: block" %>
     <%= form.date_field :birthday %>
   </div>
 
+  <div class="my-2">
+    <%= form.label :credit_card, style: "display: block" %>
+    <%= form.text_field :credit_card %>
+  </div>
+  
+
   <% unless user.persisted? %>
-    <div>
+    <div class="my-2">
       <%= form.label :email, style: "display: block" %>
       <%= form.email_field :email %>
     </div>
     
-    <div>
+    <div class="my-2">
       <%= form.label :password, style: "display: block" %>
       <%= form.password_field :password %>
     </div>
 
-    <div>
+    <div class="my-2">
       <%= form.label :password_confirmation, 'Confirm Password', style: "display: block" %>
       <%= form.password_field :password_confirmation %>
     </div>
   <% end %>
 
-  <div>
-    <%= form.submit %>
+  <div class="my-2">
+    <%= form.submit class:"btn btn-success" %> 
   </div>
 <% end %>
