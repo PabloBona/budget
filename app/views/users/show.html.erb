@@ -1,7 +1,19 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @user %>
-
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <% if @user.photo.present? %>
+          <%= image_tag @user.photo.url, alt: "User Photo", class:"rounded-circle w-25 photo" %>
+        <% else %>
+          <%= image_tag "/uploads/no-photo.jpg", alt: "User Photo", class: "rounded-circle w-25 border-1  " %>
+        <% end %> 
+      </div>
+    </div>
+  </div>
+  <div class="col text-center">
+    <h2><%= @user.name %></h2>
+  </div>
+ 
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>

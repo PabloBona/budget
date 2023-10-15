@@ -14,6 +14,7 @@ html, .bg-color {
 
 body {
   font-family: var(--light-fuente);
+  padding-top: 1px;
 }
 
 .title {
@@ -77,8 +78,14 @@ h2.log-title {
 
 .user-icon {
   position: absolute;
-  margin-top: 27px;
+  margin-top: 29px;
   background-color: transparent;
   border: none;
-  margin-left: 8px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.photo {
+  max-height: 125px;
+  object-fit: cover;
 }

@@ -9,6 +9,9 @@ gem 'rails', '~> 7.0.8'
 # Letter opener
 gem 'letter_opener'
 
+# Carrierwave
+gem 'carrierwave'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
