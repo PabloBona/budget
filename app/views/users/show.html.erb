@@ -1,13 +1,18 @@
 <p style="color: green"><%= notice %></p>
   <div class="container">
     <div class="row">
-      <div class="col text-center">
-        <% if @user.photo.present? %>
-          <%= image_tag @user.photo.url, alt: "User Photo", class:"rounded-circle w-25 photo" %>
-        <% else %>
-          <%= image_tag "/uploads/no-photo.jpg", alt: "User Photo", class: "rounded-circle w-25 border-1  " %>
-        <% end %> 
+      <div class="col">
+        <div class="d-flex justify-content-center my-2">
+          <div class="rounded-circle text-center photo" style="background-image: url('<%= @user.photo.url %>')" >
+            <% if @user.photo.present? %>
+              <%= image_tag @user.photo.url, alt: "User Photo", class: "d-none" %> <!-- Esta línea oculta la imagen, pero sigue siendo utilizada para obtener la URL de la foto -->
+            <% else %>
+              <%= image_tag "/uploads/no-photo.jpg", alt: "User Photo", class: "d-none" %> <!-- Esta línea oculta la imagen de no-photo.jpg, pero sigue siendo utilizada para obtener la URL de la imagen por defecto -->
+            <% end %>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
   <div class="col text-center">

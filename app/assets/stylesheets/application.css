@@ -86,6 +86,8 @@ h2.log-title {
 }
 
 .photo {
-  max-height: 125px;
-  object-fit: cover;
+  background-size: cover; 
+  background-position: center; 
+  height: 100px; 
+  width: 100px;
 }
