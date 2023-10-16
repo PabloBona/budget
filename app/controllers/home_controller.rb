@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
-    return unless user_signed_in?
-
-    redirect_to transactions_path
+    if user_signed_in?
+      redirect_to users_path
+    end
   end
 end

@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :sections
-  resources :transactions
   root 'home#index'
   devise_for :users
   resources :users
