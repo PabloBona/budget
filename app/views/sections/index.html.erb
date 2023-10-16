@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Sections</h1>
+
+<div id="sections">
+  <% @sections.each do |section| %>
+    <%= render section %>
+    <p>
+      <%= link_to "Show this section", section %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New section", new_section_path %>
