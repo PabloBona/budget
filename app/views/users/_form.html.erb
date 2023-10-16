@@ -21,17 +21,6 @@
     <%= form.text_field :name %>
   </div>
 
-  <div class="my-2">
-    <%= form.label :birthday, style: "display: block" %>
-    <%= form.date_field :birthday %>
-  </div>
-
-  <div class="my-2">
-    <%= form.label :credit_card, style: "display: block" %>
-    <%= form.text_field :credit_card %>
-  </div>
-  
-
   <% unless user.persisted? %>
     <div class="my-2">
       <%= form.label :email, style: "display: block" %>
