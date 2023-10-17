@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.includes(:payment_categories, :payments).where(payments: { author_id: current_user.id })
+    @categories = current_user.categories 
   end
 
   def total_amount(category)
@@ -26,7 +26,7 @@ class CategoriesController < ApplicationController
   # POST /categories or /categories.json
   def create
     @category = current_user.categories.build(category_params)
-
+  
     respond_to do |format|
       if @category.save
         format.html { redirect_to root_path, notice: 'Category was successfully created.' }
@@ -37,6 +37,8 @@ class CategoriesController < ApplicationController
       end
     end
   end
+  
+  
 
   # PATCH/PUT /categories/1 or /categories/1.json
   def update
