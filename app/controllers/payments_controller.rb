@@ -9,7 +9,7 @@ class PaymentsController < ApplicationController
     @new_payment = Payment.new
     @payment = @category.payments.build
   end
-  
+
   def sum
     @total_amount = @category.payments.sum(:amount)
   end
@@ -27,7 +27,7 @@ class PaymentsController < ApplicationController
   def create
     @payment = @category.payments.build(payment_params)
     @payment.author = current_user
-  
+
     if @payment.save
       # Crea la relación PaymentCategory para asociar el pago con la categoría
       PaymentCategory.create!(payment: @payment, category: @category)
@@ -37,7 +37,6 @@ class PaymentsController < ApplicationController
       render :new
     end
   end
-  
 
   def update
     respond_to do |format|
