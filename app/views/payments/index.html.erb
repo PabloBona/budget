@@ -1,21 +1,30 @@
-<h1>Payments for <%= @category.name %></h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col bg-color">
+      <h2 class="fs-6 log-title py-2 text-center text-white p-0">PAYMENTS</h2>
+      <%= link_to root_path do %>
+        <box-icon class="arrow-back" name='arrow-back' color='#fff'></box-icon>
+      <% end %>
+      <h1>Payments for <%= @category.name %></h1>
 
-<div id="payments">
-  <p>Total Amount: <%= @total_amount %></p>
-  <% @payments.each do |payment| %>
-    <ul class="list-unstyled">
-        <li>
-          Amount: <%= payment.amount %>
-        </li>
-        <li>
-          Date: <%= payment.created_at %>
-        </li>
-        <li>
-          Name: <%= payment.name %>
-        </li>
-    </ul>
-  <% end %>
+      <div id="payments">
+        <p>Total Amount: <%= @total_amount %></p>
+        <% @payments.each do |payment| %>
+          <ul class="list-unstyled">
+              <li>
+                Amount: <%= payment.amount %>
+              </li>
+              <li>
+                Date: <%= payment.created_at %>
+              </li>
+              <li>
+                Name: <%= payment.name %>
+              </li>
+          </ul>
+        <% end %>
 
-  <%= link_to "Add a New Transaction", new_category_payment_path(@category) %>
-  <%= link_to "Return to Categories", root_path %>
+        <%= link_to "Add a New Transaction", new_category_payment_path(@category) %>
+      </div>
+    </div>
+  </div>
 </div>
