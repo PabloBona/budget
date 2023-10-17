@@ -1,10 +1,9 @@
 class CreatePayments < ActiveRecord::Migration[7.0]
   def change
     create_table :payments do |t|
+      t.references :author, foreign_key: {to_table: "users"}
+      t.string :name
       t.decimal :amount
-      t.string :description
-      t.references :category, null: false, foreign_key: true
-      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

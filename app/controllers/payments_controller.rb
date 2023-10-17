@@ -1,6 +1,6 @@
 class PaymentsController < ApplicationController
   before_action :set_payment, only: %i[show edit update destroy]
-  before_action :set_category, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  before_action :set_category, only: %i[index show new create edit update destroy]
   before_action :authenticate_user!
 
   def index
@@ -10,15 +10,13 @@ class PaymentsController < ApplicationController
     @payment = @category.payments.build
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @payment = Payment.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @payment = @category.payments.build(payment_params)
@@ -34,7 +32,7 @@ class PaymentsController < ApplicationController
   def update
     respond_to do |format|
       if @payment.update(payment_params)
-        format.html { redirect_to payment_url(@payment), notice: "Payment was successfully updated." }
+        format.html { redirect_to payment_url(@payment), notice: 'Payment was successfully updated.' }
         format.json { render :show, status: :ok, location: @payment }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -47,7 +45,7 @@ class PaymentsController < ApplicationController
     @payment.destroy
 
     respond_to do |format|
-      format.html { redirect_to payments_url, notice: "Payment was successfully destroyed." }
+      format.html { redirect_to payments_url, notice: 'Payment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

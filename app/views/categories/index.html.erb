@@ -2,6 +2,7 @@
 
 <div id="categories">
   <% @categories.each do |category| %>
+  
     <div id="<%= dom_id category %>">
       <p>
         <strong>Name:</strong>
@@ -15,7 +16,7 @@
 
       <p>
         <strong>Total Amount:</strong>
-        <%= number_to_currency(category.total_amount) %>
+        <%= number_to_currency(total_amount(category)) %>
       </p>
       
       <div>

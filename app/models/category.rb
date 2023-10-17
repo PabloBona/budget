@@ -1,8 +1,4 @@
 class Category < ApplicationRecord
-  belongs_to :user
-  has_many :payments, dependent: :destroy
-
-  def total_amount
-    payments.sum(:amount)
-  end
+  has_many :payment_categories, dependent: :destroy
+  has_many :payments, through: :payment_categories, dependent: :destroy
 end
