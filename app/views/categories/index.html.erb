@@ -1,0 +1,46 @@
+<div>
+  <h2 class="bg-blue fs-6 m-0 py-4 text-center text-white section-title">CATEGORIES</h2>
+<div class="align-items-center d-flex justify-content-between m-2">
+  <div class="text-body-tertiary text-decoration-none">Gift credit</div>
+  <div>$45.00</div>
+</div>
+<div class="bg-grey container-fluid vh-100">
+  <div class="row">
+    <div class="col bg-color">
+
+      <div id="categories" class="">
+        <% @categories.each do |category| %>
+        
+          <div id="<%= dom_id category %>">
+          
+            <div class="bg-body border d-flex justify-content-evenly mt-2 pt-3">
+               <p>
+              <%= category.icon %>
+            </p>
+
+            <p>
+              <%= link_to category.name, category_payments_path(category), class:"text-body-tertiary text-decoration-none" %>
+            </p>
+
+            <p>
+              <%= number_to_currency(total_amount(category)) %>
+            </p>
+            </div>  
+            <div>
+              <%# <%= link_to "Edit this category", edit_category_path(category) %>
+              <%# <%= button_to "Destroy this category", category, method: :delete, data: { confirm: "Are you sure?" } %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="footer-container">
+      <div class="text-center">
+        <div class="btn-green p-2">
+          <%= link_to "Add a New Category", new_category_path, class:"border-light btn btn-green w-100" %>
+        </div>
+      <div>
+      <div>
+    </div>
+  </div>
+</div>
+</div>

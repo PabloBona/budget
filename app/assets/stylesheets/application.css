@@ -10,7 +10,7 @@
 
 body {
   font-family: var(--light-fuente);
-  padding-top: 1px;
+  overflow: hidden;
 }
 
 .title {
@@ -33,7 +33,11 @@ body {
   font-size: 3.5rem;
 }
 
-h2.log-title {
+.section-title {
+  font-weight: 700
+}
+
+h2.log-title, .bg-blue {
   background-color: #3778c2;
 }
 
@@ -94,4 +98,35 @@ h2.log-title {
   color: white;
   font-size: 16px;
   height: 100vh;
+}
+
+/* Transaction */
+.bg-grey {
+  background-color: #f1f1f1;
+}
+
+/* Btn Succes */
+.btn-green {
+  color: #fff;
+  background-color: var(--second);
+  border-color: var(--second);
+}
+.btn-green:hover {
+  color: #fff;
+  background-color: var(--second);
+  border-color:var(--second);
+}
+.btn-green:focus, .btn-green.focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+.btn-green.disabled, .btn-green:disabled {
+  background-color: var(--second);
+  border-color: var(--second);
+}
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
