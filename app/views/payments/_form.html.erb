@@ -16,10 +16,16 @@
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
   </div>
 
+  <div>
+    <%= form.label :category_id, "Category", style: "display: block" %>
+    <%= form.select :category_id, options_from_collection_for_select(@categories, 'id', 'name'), { include_blank: 'Select a category' } %>
+  </div>
+    <%# # <%= form.select :category_id, @categories, { include_blank: 'Select a category' } %>
+    <%# Genera un menu desplegable con las categorias existentes %>
   <div>
     <%= form.submit %>
   </div>

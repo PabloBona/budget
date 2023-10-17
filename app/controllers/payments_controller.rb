@@ -9,25 +9,35 @@ class PaymentsController < ApplicationController
     @new_payment = Payment.new
     @payment = @category.payments.build
   end
+  
+  def sum
+    @total_amount = @category.payments.sum(:amount)
+  end
+  helper_method :sum
 
   def show; end
 
   def new
     @payment = Payment.new
+    @categories = Category.all
   end
 
   def edit; end
 
   def create
     @payment = @category.payments.build(payment_params)
-    @payment.user = current_user
-
+    @payment.author = current_user
+  
     if @payment.save
+      # Crea la relación PaymentCategory para asociar el pago con la categoría
+      PaymentCategory.create!(payment: @payment, category: @category)
       redirect_to category_payments_path(@category), notice: 'Payment was successfully created.'
     else
+      @categories = Category.all
       render :new
     end
   end
+  
 
   def update
     respond_to do |format|
@@ -63,6 +73,6 @@ class PaymentsController < ApplicationController
   end
 
   def payment_params
-    params.require(:payment).permit(:amount, :description, :category_id, :user_id)
+    params.require(:payment).permit(:amount, :name, :date)
   end
 end
