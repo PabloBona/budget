@@ -1,9 +1,13 @@
 class PaymentsController < ApplicationController
   before_action :set_payment, only: %i[show edit update destroy]
   before_action :set_category, only: %i[index show new create edit update destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
+
 
   def index
+    if @category.user != current_user
+      redirect_to categories_path, alert: 'Category not found.'
+    end
     @payments = @category.payments.order(created_at: :desc)
     @total_amount = @payments.sum(:amount)
     @new_payment = Payment.new
@@ -19,7 +23,7 @@ class PaymentsController < ApplicationController
 
   def new
     @payment = Payment.new
-    @categories = Category.all
+    @categories = Category.where(user: current_user).order(name: :asc)
   end
 
   def edit; end

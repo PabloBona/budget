@@ -1,12 +1,12 @@
+      <h2 class="bg-blue fs-6 m-0 py-4 text-center text-white section-title">LOGIN</h2>
 <div class="container-fluid">
   <div class="row">
     <div class="col bg-color">
-      <h2 class="fs-6 log-title py-2 text-center text-white p-0">LOGIN</h2>
       <%= link_to root_path do %>
         <box-icon class="arrow-back" name='arrow-back' color='#fff'></box-icon>
       <% end %>
 
-      <div class="text-center log-input">
+      <div class="text-center mt-2">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="field">
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "Email" %>

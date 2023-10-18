@@ -1,30 +1,38 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col bg-color">
-      <h2 class="fs-6 log-title py-2 text-center text-white p-0">PAYMENTS</h2>
+  <h2 class="fs-6 log-title py-4 text-center text-white section-title">PAYMENTS</h2>
       <%= link_to root_path do %>
-        <box-icon class="arrow-back" name='arrow-back' color='#fff'></box-icon>
+        <box-icon class="arrow-back mx-2" name='arrow-back' color='#fff'></box-icon>
       <% end %>
-      <h1>Payments for <%= @category.name %></h1>
-
-      <div id="payments">
-        <p>Total Amount: <%= @total_amount %></p>
-        <% @payments.each do |payment| %>
-          <ul class="list-unstyled">
-              <li>
-                Amount: <%= payment.amount %>
-              </li>
-              <li>
-                Date: <%= payment.created_at %>
-              </li>
-              <li>
-                Name: <%= payment.name %>
-              </li>
-          </ul>
-        <% end %>
-
-        <%= link_to "Add a New Transaction", new_category_payment_path(@category) %>
-      </div>
+<div class="bg-grey container-fluid vh-100">
+  <div class="row">
+    <div class="bg-color col mb-5">
+     <h2>Payments for <%= @category.name %></h2>
+     <p>Total Amount: <%= @total_amount %></p>
+      <% @payments.each do |payment| %>
+        <ul class="bg-white border-0 list-unstyled p-3 rounded-2 shadow">
+          <li class="dotted">
+            <%= payment.name.titleize %>
+          </li>
+          <hr class="dotted">
+          <li>
+            Date: <%= payment.created_at.strftime("%Y-%m-%d") %>
+          </li>
+          <hr class="dotted">
+          <li>
+              <div class="d-flex justify-content-between">
+              <p>TOTAL PAYMENT:</p>
+              <p class=""><%=number_to_currency(payment.amount) %></p>
+              </div>
+           </li>
+        </ul>
+      <% end %>
+ 
+      <div class="footer-container">
+      <div class="text-center">
+        <div class="btn-green p-2">
+          <%= link_to "Add a New Transaction", new_category_payment_path(@category), class:"border-light btn btn-green w-100" %>
+        </div>
+      <div>
+      <div>
     </div>
   </div>
 </div>
