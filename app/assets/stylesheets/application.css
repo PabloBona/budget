@@ -10,7 +10,6 @@
 
 body {
   font-family: var(--light-fuente);
-  overflow: scroll;
   background-color: #F0F2F1;
 }
 
@@ -46,7 +45,7 @@ h2.log-title, .bg-blue {
 }
 
 .log-title {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -69,7 +68,7 @@ h2.log-title, .bg-blue {
 }
 
 .arrow-back {
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1;
   margin-top: 20px;
@@ -141,7 +140,7 @@ h2.log-title, .bg-blue {
 }
 
 .zoom-on-hover:hover {
-  transform: scale(1.1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
 .shadow {
