@@ -1,21 +1,44 @@
-@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@300;600&display=swap');
+
 :root {
   --main: #3778c2;
   --second: #5fb523;
   --color-text: #434b54;
-  --bold-fuente: 'proxima-nova', sans-serif;
   --light-fuente: 'proxima-nova', sans-serif
 }
 
 body {
-  font-family: var(--light-fuente);
-  overflow: hidden;
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  font-family: 'Proxima Nova Extra Condensed', sans-serif;
+  background-color: #F0F2F1;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.logout-btn {
+  background-color: inherit;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.letter-spacing {
+  letter-spacing: 0.5px;
 }
 
 .title {
   height: 60vh !important;
-  background-color: #F0F2F1;
+}
+
+.snap {
+  color: var(--color-text);
+  font-size: 3rem;
+  user-select: none;
+  font-style: italic;
   font-family: var(--light-fuente);
 }
 
@@ -28,11 +51,6 @@ body {
   transition: background-color 1s, color 1s;
 }
 
-.snap {
-  font-family: 'Pacifico', cursive;
-  font-size: 3.5rem;
-}
-
 .section-title {
   font-weight: 700
 }
@@ -42,7 +60,7 @@ h2.log-title, .bg-blue {
 }
 
 .log-title {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -59,20 +77,16 @@ h2.log-title, .bg-blue {
   padding: 0.5rem;
 }
 
-.log-input {
-  margin-top: 3rem;
-}
-
 .forgot-text {
   text-decoration: none;
   color: var(--color-text);
 }
 
 .arrow-back {
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1;
-  margin-top: 5px;
+  margin-top: 20px;
   cursor: pointer;
 }
 
@@ -100,6 +114,14 @@ h2.log-title, .bg-blue {
   height: 100vh;
 }
 
+.input-width {
+  width: 75px;
+}
+
+.align-custom {
+  align-items: baseline;
+  border: 2px solid white;
+}
 /* Transaction */
 .bg-grey {
   background-color: #f1f1f1;
@@ -129,4 +151,29 @@ h2.log-title, .bg-blue {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+.zoom-on-hover {
+  transition: transform 0.3s ease;
+  color: red
+}
+
+.zoom-on-hover {
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.zoom-on-hover:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.shadow {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.shadow:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }

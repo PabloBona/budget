@@ -2,18 +2,18 @@
   redirect_to user_path(current_user)
 <% else %>
 
-<div class="container-fluid p-0 position-fixed">
+<div class="container-fluid">
   <div class="align-items-center d-flex justify-content-center title">
     <div class="row">
       <div class="col text-center">
-        <h2 class="snap">4Budget</h2>
+        <h2 class="snap">4BudGet</h2>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="col text-center user-btn title">
-      <%= link_to "LOG IN", new_user_session_path, class: "btn w-100 p-3 rounded-0" %>
-      <%= link_to "SIGN UP", new_user_registration_path, class: "btn w-100 p-3 rounded-0" %>
+    <div class="col text-center user-btn">
+      <%= link_to "LOG IN", new_user_session_path, class: "btn fs-4 p-3 rounded-0 w-100" %>
+      <%= link_to "SIGN UP", new_user_registration_path, class: "btn fs-4 p-3 rounded-0 w-100" %>
     </div>
   </div>
 </div>

@@ -1,8 +1,7 @@
-<%= form_with(model: @category, local: true) do |form| %>
+<%= form_with(model: @category, local: true, class: "py-5") do |form| %>
   <% if @category.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
-      <ul>
+    <div style="color: red" class="alert alert-warning">
+      <ul class="list-unstyled">
         <% @category.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
@@ -10,17 +9,23 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+  <div class="">
+    <div class="my-2">
+      <%= form.text_field :name, placeholder: "Name", class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
+    </div>
 
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+    <div>
+      <%= form.select :icon, ICONS, { prompt: "Select an icon" }, class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
+    </div>
   </div>
-
-  <div>
-    <%= form.submit %>
+  
+  <div class="footer-container">
+    <div class="text-center">
+      <div class="btn-green p-2">
+        <div class="border-light btn w-100">
+          <%= form.submit class: "btn p-0 text-white" %>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
