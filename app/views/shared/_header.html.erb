@@ -1,0 +1,15 @@
+<header class="app-header bg-blue d-flex align-items-center justify-content-between px-3">
+  <div class="actions action-left">
+    <%= link_to(link) do %>
+      <box-icon name='<%= icon %>' color='#fff'></box-icon>
+    <% end %>
+  </div>
+  <h2 class="text-white"><%= title %></h2>
+  <div class="actions action-right">
+    <% if logout %>
+      <%= button_to destroy_user_session_path, method: :delete, class: "logout-btn p-0" do %>
+      <box-icon name='exit' color='#fff'></box-icon>
+      <% end %>
+    <% end %>
+  </div>
+</header>

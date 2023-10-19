@@ -1,20 +1,2 @@
-<header>
-  <div class="d-flex justify-content-between align-items-center bg-blue p-3">
-    <%= link_to root_path do %>
-      <box-icon class="" name='arrow-back' color='#fff'></box-icon>
-    <% end %>
-    <h2 class="text-white">NEW PAYMENTS</h2>
-    <div class="position-relative">
-      <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "logout-btn p-0" %>
-    </div>
-  </div>
-</header>
-
-<div class="bg-grey container-fluid">
-  <div class="row">
-    <div class="bg-color col ">
- 
-      <%= render "form", payment: @payment %>
-    </div>
-  </div>
-</div>
+<%= render "shared/header", title: 'NEW PAYMENT', icon: 'arrow-back', link: root_path, logout: true %>
+<%= render "form", payment: @payment %>

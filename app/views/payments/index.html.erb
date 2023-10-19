@@ -1,19 +1,9 @@
-<header>
-  <div class="d-flex justify-content-between align-items-center bg-blue p-3">
-    <%= link_to root_path do %>
-      <box-icon class="" name='arrow-back' color='#fff'></box-icon>
-    <% end %>
-    <h2 class="text-white">PAYMENTS</h2>
-    <div class="position-relative">
-      <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "logout-btn p-0" %>
-    </div>
-  </div>
-</header>
+<%= render "shared/header", title: 'PAYMENTS', icon: 'arrow-back', link: root_path, logout: true %>
 
-<div class="bg-grey">
-  <div class="row">
-    <div class="bg-grey container-fluid ">
-      <div class="align-custom bg-white d-flex justify-content-around   rounded-2">
+<div class="bg-white rounded-2 rounded-top-0 py-1 sticky-after-header shadow">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="d-flex justify-content-around">
         <p>Payments for <%= @category.name %></p>
         <p>Total Amount: <%= @total_amount %></p>
       </div>
@@ -21,35 +11,33 @@
   </div>
 </div>
 
-<div class="bg-grey container-fluid mt-2">
+<div class="container-fluid site-content mt-3">
   <div class="row">
-    <div class="bg-color col mb-5">
-      <% @payments.each do |payment| %>
-        <ul class="bg-white border-0 list-unstyled p-3 rounded-2 shadow">
-          <li class="dotted">
-            <%= payment.name.titleize %>
-          </li>
-          <div class="border-top my-3"></div>
-          <li>
-            Date: <%= payment.created_at.strftime("%Y-%m-%d") %>
-          </li>
-          <div class="border-top my-3"></div>
-          <li>
-              <div class="d-flex justify-content-between">
-              <p>TOTAL PAYMENT:</p>
-              <p class=""><%=number_to_currency(payment.amount) %></p>
-              </div>
-           </li>
-        </ul>
-      <% end %>
- 
-      <div class="footer-container">
-      <div class="text-center">
-        <div class="btn-green p-2">
-          <%= link_to "Add a New Transaction", new_category_payment_path(@category), class:"border-light btn btn-green w-100" %>
-        </div>
-      <div>
-      <div>
+    <div class="col">
+      <div id="payments" class="d-flex flex-column gap-3">
+        <% @payments.each do |payment| %>
+          <ul class="bg-white border-0 list-unstyled p-3 rounded-2 shadow mb-0 d-flex flex-column gap-3 payment-list">
+            <li class="dotted">
+              <%= payment.name.titleize %>
+            </li>
+            <li>
+              Date: <%= payment.created_at.strftime("%Y-%m-%d") %>
+            </li>
+            <li>
+                <div class="d-flex justify-content-between">
+                <p>TOTAL PAYMENT:</p>
+                <p class=""><%=number_to_currency(payment.amount) %></p>
+                </div>
+            </li>
+          </ul>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
+<div class="footer-container">
+  <div class="btn-green p-2">
+     <%= link_to "Add a New Transaction", new_category_payment_path(@category), class:"border-light btn btn-green w-100" %>
+  </div>
+<div>
