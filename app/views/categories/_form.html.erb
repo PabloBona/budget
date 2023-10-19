@@ -1,4 +1,4 @@
-<%= form_with(model: @category, local: true, class:"py-5") do |form| %>
+<%= form_with(model: @category, local: true, class: "py-5") do |form| %>
   <% if @category.errors.any? %>
     <div style="color: red" class="alert alert-warning">
       <ul class="list-unstyled">
@@ -10,22 +10,22 @@
   <% end %>
 
   <div class="">
-      <div class="my-2">
-        <%= form.text_field :name, placeholder: "Name", class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
-      </div>
+    <div class="my-2">
+      <%= form.text_field :name, placeholder: "Name", class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
+    </div>
 
-      <div>
-        <%= form.text_field :icon, placeholder: "Icon", class: "border-0 my-2 p-2 rounded-3 shadow w-100"%>
-      </div>
+    <div>
+      <%= form.select :icon, ICONS, { prompt: "Select an icon" }, class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
+    </div>
   </div>
+  
   <div class="footer-container">
     <div class="text-center">
       <div class="btn-green p-2">
         <div class="border-light btn w-100">
-          <%= form.submit class:"btn p-0 text-white" %>
+          <%= form.submit class: "btn p-0 text-white" %>
         </div>
       </div>
-    <div>
-  <div>
-
+    </div>
+  </div>
 <% end %>
