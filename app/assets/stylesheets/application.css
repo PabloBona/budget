@@ -5,11 +5,11 @@
   --main: #3778c2;
   --second: #5fb523;
   --color-text: #434b54;
-  --light-fuente: 'proxima-nova', sans-serif
+  --light-fuente: 'proxima-nova', sans-serif;
+  --header-height: 60px;
 }
 
 body {
-  font-family: 'Proxima Nova Condensed', sans-serif;
   font-family: 'Proxima Nova Extra Condensed', sans-serif;
   background-color: #F0F2F1;
 }
@@ -100,9 +100,9 @@ h2.log-title, .bg-blue {
 }
 
 .photo {
-  background-size: cover; 
-  background-position: center; 
-  height: 100px; 
+  background-size: cover;
+  background-position: center;
+  height: 100px;
   width: 100px;
 }
 
@@ -146,12 +146,6 @@ h2.log-title, .bg-blue {
   border-color: var(--second);
 }
 
-.footer-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
 
 .zoom-on-hover {
   transition: transform 0.3s ease;
@@ -176,4 +170,54 @@ h2.log-title, .bg-blue {
 .shadow:hover {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+}
+
+
+/* new */
+
+.site-content {
+  padding-bottom: 80px;
+}
+
+.sticky-after-header {
+  position: sticky;
+  top: var(--header-height);
+}
+
+header.app-header {
+  height: var(--header-height);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header.app-header .actions {
+  width: 40px;
+  height: 22px;
+}
+
+header.app-header h2 {
+  flex: 1;
+  text-align: center;
+}
+
+header.app-header .actions:last-child {
+  text-align: right;
+}
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.payment-list li {
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 1rem;
+}
+
+.payment-list li:last-child {
+  border-bottom: none;
 }

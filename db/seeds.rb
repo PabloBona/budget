@@ -1,18 +1,56 @@
-user1 = User.create!(name: "User1", email: "pablobonasera@gmail.com", password: "123123", confirmed_at: Time.now)
-user2 = User.create!(name: "User2", email: "user2@example.com", password: "password", confirmed_at: Time.now)
+user1 = User.create!(
+  name: "user1",
+  email: "user1@gmail.com",
+  password: "123123",
+  password_confirmation: "123123"
+)
 
-category1 = user1.categories.create!(name: "Category1", icon: "Icon1")
-payment1 = user1.payments.create!(name: "Payment1", amount: 1000)
-PaymentCategory.create!(payment: payment1, category: category1)
+user2 = User.create!(
+  name: "user2",
+  email: "user2@gmail.com",
+  password: "123123",
+  password_confirmation: "123123"
+)
 
-category2 = user1.categories.create!(name: "Category2", icon: "Icon2")
-payment2 = user1.payments.create!(name: "Payment2", amount: 1000)
-PaymentCategory.create!(payment: payment2, category: category2)
+categories_user1 = []
+ICONS.each_with_index do |icon, index|
+  categories_user1 << Category.create!(
+    name: "Cat#{index + 1}",
+    icon: icon,
+    user: user1
+  )
+end
 
-category3 = user2.categories.create!(name: "Category3", icon: "Icon3")
-payment3 = user2.payments.create!(name: "Payment3", amount: 1500)
-PaymentCategory.create!(payment: payment3, category: category3)
 
-category4 = user2.categories.create!(name: "Category4", icon: "Icon4")
-payment4 = user2.payments.create!(name: "Payment4", amount: 2000)
-PaymentCategory.create!(payment: payment4, category: category4)
+categories_user1.each do |category|
+  5.times do
+    Payment.create!(
+      name: "Pay #{category.name}",
+      amount: rand(10..1000).to_f,
+      author: user1,
+      categories: [category]
+    )
+  end
+end
+
+categories_user2 = []
+ICONS.each_with_index do |icon, index|
+  categories_user2 << Category.create!(
+    name: "Cat#{index + 1}",
+    icon: icon,
+    user: user2
+  )
+end
+
+
+categories_user2.each do |category|
+  3.times do
+    Payment.create!(
+      name: "Pago de #{category.name}",
+      amount: rand(10..1000).to_f,
+      author: user2,
+      categories: [category]
+    )
+  end
+end
+

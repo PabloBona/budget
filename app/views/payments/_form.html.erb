@@ -1,35 +1,33 @@
-<%= form_with(model: [@category, @payment], local: true, class:"py-5") do |form| %>
+<%= form_with(model: [@category, @payment], local: true) do |form| %>
   <% if @payment.errors.any? %>
-    <div style="color: red" class="alert alert-warning">
-      <ul class="list-unstyled">
+    <div style="color: red" class="alert alert-warning mt-2 mb-0">
+      <ul class="list-unstyled mb-0">
         <% @payment.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-  
-  <div class="my-5">
-    <div>
-      <%= form.text_field :amount, placeholder: "Amount", class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
-    </div>
 
-    <div>
-      <%= form.text_field :name, placeholder: "Payment Name", class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
-    </div>
-
-    <div>
-      <%= form.select :category_ids, options_from_collection_for_select(@categories, 'id', 'name'), { include_blank: 'Select a category' }, class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
-    </div>
-
-    <div class="footer-container">
-      <div class="text-center">
-        <div class="btn-green p-2">
-          <turbo-frame id="new_payment_form">
-            <%= form.submit class: "border-light btn btn-green w-100" %>
-          </turbo-frame>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="mt-2">
+          <%= form.text_field :amount, placeholder: "Amount", class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
+        </div>
+        <div class="mt-2">
+          <%= form.text_field :name, placeholder: "Payment Name", class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
+        </div>
+        <div class="mt-2">
+          <%= form.select :category_ids, options_from_collection_for_select(@categories, 'id', 'name'), { include_blank: 'Select a category' }, class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="footer-container">
+    <div class="btn-green p-2">
+      <%= form.submit class: "border-light btn btn-green w-100" %>
+    </div>
+  <div>
 <% end %>
