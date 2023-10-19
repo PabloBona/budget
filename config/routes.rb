@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   end
 
   root 'home#index'
-  resources :users
   devise_for :users
+  resources :users, only: [:index, :show]
 end

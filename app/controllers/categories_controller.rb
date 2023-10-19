@@ -10,9 +10,13 @@ class CategoriesController < ApplicationController
   end
   helper_method :total_amount
 
+  def show; end
+
   def new
     @category = Category.new
   end
+
+  def edit; end
 
   def create
     @category = current_user.categories.build(category_params)
@@ -23,6 +27,10 @@ class CategoriesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def update; end
+
+  def destroy; end
 
   private
 

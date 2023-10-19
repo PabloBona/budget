@@ -34,7 +34,7 @@ RSpec.describe PaymentsController, type: :controller do
       get :new, params: { category_id: category.id }
       expect(assigns(:payment)).to be_a_new(Payment)
       expect(assigns(:categories)).to eq([category])
-  end
+    end
 
     context 'with invalid attributes' do
       it 'does not save the new payment' do

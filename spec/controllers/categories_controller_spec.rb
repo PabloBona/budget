@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe CategoriesController, type: :controller do
   let(:user) { create(:user) }
-  let(:category) { create(:category, user: user) }
+  let(:category) { create(:category, user:) }
 
   before do
     sign_in user
@@ -36,9 +36,9 @@ RSpec.describe CategoriesController, type: :controller do
   describe 'POST #create' do
     context 'with valid attributes' do
       it 'creates a new category' do
-        expect {
+        expect do
           post :create, params: { category: attributes_for(:category) }
-        }.to change(Category, :count).by(1)
+        end.to change(Category, :count).by(1)
       end
 
       it 'redirects to root path' do
@@ -49,9 +49,9 @@ RSpec.describe CategoriesController, type: :controller do
 
     context 'with invalid attributes' do
       it 'does not save the new category' do
-        expect {
+        expect do
           post :create, params: { category: attributes_for(:category, name: nil) }
-        }.to_not change(Category, :count)
+        end.to_not change(Category, :count)
       end
 
       it 're-renders the new template' do
