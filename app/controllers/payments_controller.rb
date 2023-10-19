@@ -13,14 +13,10 @@ class PaymentsController < ApplicationController
   end
   helper_method :sum
 
-  def show; end
-
   def new
     @payment = Payment.new
     @categories = current_user.categories.order(name: :asc)
   end
-
-  def edit; end
 
   def create
     @payment = current_user.payments.build(payment_params)
@@ -32,10 +28,6 @@ class PaymentsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
-  def update; end
-
-  def destroy; end
 
   private
 
