@@ -1,11 +1,14 @@
-      <h2 class="bg-blue fs-6 m-0 py-4 text-center text-white section-title">LOGIN</h2>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col bg-color">
-      <%= link_to root_path do %>
-        <box-icon class="arrow-back" name='arrow-back' color='#fff'></box-icon>
-      <% end %>
-
+<header>
+  <div class="d-flex justify-content-between align-items-center bg-blue p-3">
+    <%= link_to(root_path) do %>
+      <box-icon name='arrow-back' color='#fff'></box-icon>
+    <% end %>
+    <h2 class="text-white">LOGIN</h2>
+    <div class="position-relative">
+      <%= link_to("", root_path, class: "logout-btn p-0") %>
+    </div>
+  </div>
+</header>
       <div class="text-center mt-2">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="field">
