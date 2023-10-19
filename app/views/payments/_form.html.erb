@@ -19,7 +19,6 @@
     </div>
 
     <div>
-      <% #= form.collection_select :category_ids, current_user.categories, :id, :name, required: true %>
       <%= form.select :category_ids, options_from_collection_for_select(@categories, 'id', 'name'), { include_blank: 'Select a category' }, class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
     </div>
 

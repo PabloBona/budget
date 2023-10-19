@@ -103,6 +103,10 @@ h2.log-title, .bg-blue {
   width: 75px;
 }
 
+.pt-header {
+  margin-top: 5rem;
+}
+
 /* Transaction */
 .bg-grey {
   background-color: #f1f1f1;
