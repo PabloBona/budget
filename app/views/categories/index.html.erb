@@ -1,8 +1,24 @@
-<div>
-  <h2 class="bg-blue fs-5 m-0 py-4 text-center text-white section-title letter-spacing">CATEGORIES</h2>
-<div class="align-items-center d-flex justify-content-between p-2 bg-white">
-  <div class="text-body-tertiary text-decoration-none">Gift credit</div>
-  <div>$45.00</div>
+<header>
+  <div class="d-flex justify-content-between align-items-center bg-blue p-3">
+       <box-icon name='bank' type='solid' color='#fefffe' ></box-icon>
+     <h2 class="text-white">CATEGORIES</h2>
+    <div class="position-relative">
+      <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "logout-btn p-0" %>
+    </div>
+  </div>
+</header>
+
+<div class="bg-grey">
+  <div class="row">
+    <div class="bg-grey container-fluid ">
+      <div class="align-custom bg-white d-flex justify-content-around   rounded-2">
+          <p>Gift credit</p>
+          <p>$45.00</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 </div>
 <div class="bg-grey container-fluid">
   <div class="row">
@@ -13,7 +29,7 @@
         
           <div id="<%= dom_id category %>" class="zoom-on-hover">
             <%= link_to category_payments_path(category),class:"text-decoration-none", :action => 'go' do %>
-            <div class="bg-body border d-flex justify-content-evenly mt-3 pt-3 shadow">
+            <div class="bg-body border d-flex justify-content-evenly mt-3 p-3 shadow">
                <p class="text-body-tertiary">
               <%= category.icon %>
             </p>

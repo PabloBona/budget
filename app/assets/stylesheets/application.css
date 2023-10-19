@@ -16,8 +16,11 @@ p {
   margin: 0;
 }
 
-hr.dotted {
-  border-top: 1px dashed #ccc
+.logout-btn {
+  background-color: inherit;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .letter-spacing {
@@ -144,12 +147,22 @@ h2.log-title, .bg-blue {
   color: red
 }
 
+.zoom-on-hover {
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
 .zoom-on-hover:hover {
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 .shadow {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #ffffff;
+}
+
+.shadow:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
