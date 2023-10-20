@@ -11,10 +11,16 @@
 
 body {
   font-family: 'Proxima Nova Extra Condensed', sans-serif;
-  background-color: #F0F2F1;
+  background-color: #f0f2f1;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
 }
@@ -42,20 +48,21 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: var(--light-fuente);
 }
 
-.user-btn a:hover{
-  background-color: var(--main);
-  color: white;
-}
-
 .user-btn a {
   transition: background-color 1s, color 1s;
 }
 
-.section-title {
-  font-weight: 700
+.user-btn a:hover {
+  background-color: var(--main);
+  color: white;
 }
 
-h2.log-title, .bg-blue {
+.section-title {
+  font-weight: 700;
+}
+
+h2.log-title,
+.bg-blue {
   background-color: #3778c2;
 }
 
@@ -107,8 +114,8 @@ h2.log-title, .bg-blue {
 }
 
 .bg-user-show {
-  background: rgb(2,0,36);
-  background: linear-gradient(87deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 5%, rgba(0,212,255,1) 100%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(87deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 5%, rgba(0, 212, 255, 1) 100%);
   color: white;
   font-size: 16px;
   height: 100vh;
@@ -122,6 +129,7 @@ h2.log-title, .bg-blue {
   align-items: baseline;
   border: 2px solid white;
 }
+
 /* Transaction */
 .bg-grey {
   background-color: #f1f1f1;
@@ -133,45 +141,44 @@ h2.log-title, .bg-blue {
   background-color: var(--second);
   border-color: var(--second);
 }
+
 .btn-green:hover {
   color: #fff;
-  background-color: var(--second);
-  border-color:var(--second);
-}
-.btn-green:focus, .btn-green.focus {
-  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
-}
-.btn-green.disabled, .btn-green:disabled {
   background-color: var(--second);
   border-color: var(--second);
 }
 
+.btn-green:focus,
+.btn-green.focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
 
-.zoom-on-hover {
-  transition: transform 0.3s ease;
-  color: red
+.btn-green.disabled,
+.btn-green:disabled {
+  background-color: var(--second);
+  border-color: var(--second);
 }
 
 .zoom-on-hover {
+  color: red;
   transition: box-shadow 0.3s ease, border-radius 0.3s ease;
 }
 
 .zoom-on-hover:hover {
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
 .shadow {
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .shadow:hover {
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
-
 
 /* new */
 
