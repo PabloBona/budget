@@ -12,20 +12,17 @@
    - [Key Features](#key-features)
 - [💻 Live Demo](#live-demo)
 - [📸 Screenshots](#screenshots)
-- [🛠 Setup](#setup)
+- [📖 Getting Started](#started)
+  - [🛠 Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
-- [🚀 Interactions](#interactions)
-  - [Splash Screen](#splash-screen)
-  - [Sign Up and Log In](#sign-up-and-log-in)
-  - [Home Page (Categories Page)](#home-page-categories-page)
-  - [Transactions Page](#transactions-page)
-  - [Add a New Category Page](#add-a-new-category-page)
-  - [Add a New Transaction Page](#add-a-new-transaction-page)
 - [🧪 Testing Requirements](#testing-requirements)
 - [🔧 Technical Requirements](#technical-requirements)
 - [👥 Authors](#authors)
-- [📜 Acknowledgment](#Acknowledgment)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgment](#Acknowledgment)
 - [📜 License](#license)
 
 ## 📖 About the Project <a name="about-project"></a>
@@ -66,6 +63,9 @@ This project is inspired by the original design idea by Gregoire Vella on Behanc
 ![Alt text](image-1.png)
 ![Alt text](image-2.png)
 ![Alt text](image-3.png)
+
+
+### 💻 Getting Started  <a name="started"></a>
 
 ### 🛠 Setup <a name="setup"></a>
 
@@ -125,60 +125,31 @@ Follow these steps to use 4Budget:
 
    Open your web browser and go to [http://localhost:3000](http://localhost:3000) to access 4Budget and manage your personal finances efficiently.
 
-## 🚀 Interactions <a name="interactions"></a>
-
-
-### Splash Screen <a name="splash-screen"></a>
-
-The splash screen displays the app's name and provides links to the sign-up and log-in pages.
-
-### Sign Up and Log In <a name="sign-up-and-log-in"></a>
-
-Users can register with their full name, email, and password. Returning users can log in with their email and password.
-
-### Home Page (Categories Page) <a name="home-page-categories-page"></a>
-
-- Displays a list of categories with their names, icons, and total transaction amounts.
-- Clicking on a category navigates the user to the transactions page for that category.
-- Provides an option to add a new category.
-
-### Transactions Page <a name="transactions-page"></a>
-
-- Lists transactions for a specific category, ordered by the most recent.
-- Displays the total amount for the category.
-- Allows users to add new transactions.
-- Users can navigate back to the home page.
-
-### Add a New Category Page <a name="add-a-new-category-page"></a>
-
-- Users can create a new category by providing a name and icon.
-- Offers a "Save" button to create the category.
-- Users can navigate back to the home page.
-
-### Add a New Transaction Page <a name="add-a-new-transaction-page"></a>
-
-- Users can create a new transaction with a name, amount, and one or more categories.
-- Provides a "Save" button to create the transaction.
-- Users can navigate back to the transactions page for the relevant category.
-
-## 🧪 Testing Requirements <a name="testing-requirements"></a>
-
-Comprehensive unit and integration tests are implemented for all essential components of the 4Budget Ruby on Rails application.
-
-## 🔧 Technical Requirements <a name="technical-requirements"></a>
-
-- **Database:** Postgres is used as the database.
-- **Authentication:** Devise gem is employed for user authentication.
-- **Validation:** All user inputs are validated to enhance security.
-- **Deployment:** The app is deployed and accessible online.
-
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Pablo Bonasera**
 - GitHub: [@PabloBona](https://github.com/PabloBona)
 - LinkedIn: [Pablo Bonasera](https://www.linkedin.com/in/pablo-bonasera/)
 
-### Acknowledgment <a name="Acknowledgment"></a>
+## 🔭 Future Features <a name="future-features"></a>
+
+We are committed to continuous improvement and plan to implement the following features in future updates:
+
+- **Budgeting Tool:** Introduce a comprehensive budgeting tool that allows users to set monthly budgets for different expense categories. The app will provide notifications and insights to help users stay within their budget limits.
+
+- **Expense Insights:** Enhance the analytics section with more detailed insights. Users will be able to visualize their spending trends over time, compare expenses across different categories, and receive personalized suggestions for optimizing their budget.
+
+- **Multi-Platform Support:** Extend 4Budget's accessibility by developing mobile applications for both Android and iOS platforms. This will enable users to manage their finances seamlessly on their smartphones and tablets, providing a consistent experience across devices.
+
+### 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+### ⭐️ Show your support <a name="support"></a>
+
+Give a ⭐️ if you like this project!
+
+### 🙏 Acknowledgment <a name="Acknowledgment"></a>
 
 We would like to express our deepest gratitude to [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance for her Original design [idea](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=).
 
