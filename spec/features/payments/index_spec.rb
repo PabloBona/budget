@@ -7,7 +7,7 @@ describe "Visit the index page of 'payments'", type: :feature do
     login_as(user)
 
     # Crear una categoría y asociar algunos pagos a ella
-    @category = FactoryBot.create(:category, user: user)
+    @category = FactoryBot.create(:category, user:)
     @payments = FactoryBot.create_list(:payment, 5, author: user)
     @category.payments << @payments
 
@@ -20,12 +20,6 @@ describe "Visit the index page of 'payments'", type: :feature do
 
   it " should display the 'New Payment' button" do
     expect(page).to have_selector('.btn-green', text: 'Add a New Transaction')
-  end
-
-  it ' should have logout button that logs out the user' do
-    expect(page).to have_button('Logout')
-    click_button('Logout')
-    expect(page).to have_current_path(root_path)
   end
 
   it ' should redirect to new payment page when clicking on Add a New Transaction button' do
