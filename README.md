@@ -16,8 +16,6 @@
   - [🛠 Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
-- [🧪 Testing Requirements](#testing-requirements)
-- [🔧 Technical Requirements](#technical-requirements)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
