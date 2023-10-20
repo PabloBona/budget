@@ -6,6 +6,7 @@
 - [🎨 Design](#design)
 - [💻 Live Demo](#live-demo)
 - [📸 Screenshots](#screenshots)
+- [📜 Acknowledgment](#Acknowledgment)
 - [🛠 Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
@@ -47,6 +48,11 @@ This project is inspired by the original design idea by Gregoire Vella on Behanc
 ![Alt text](image-1.png)
 ![Alt text](image-2.png)
 ![Alt text](image-3.png)
+
+### Acknowledgment <a name="Acknowledgment"></a>
+
+We would like to express our deepest gratitude to **Gregoire Vella**, the talented app designer who contributed significantly to the visual and user experience aspects of this project. His creative insights and dedication played a crucial role in shaping the design of our application. We are truly thankful for his expertise and valuable contributions.
+
 ### 🛠 Setup <a name="setup"></a>
 
 1. **Clone the Project Repository:**
