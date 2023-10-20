@@ -2,11 +2,16 @@
 
 ## 📗 Table of Contents
 
+
 - [📖 About the Project](#about-project)
-- [🎨 Design](#design)
+- [🛠 Build With](#build-with)
+   - [Tech Stack](#tech-stack)
+      - [Client](#client)
+      - [Server](#server)
+      - [Database](#database)
+   - [Key Features](#key-features)
 - [💻 Live Demo](#live-demo)
 - [📸 Screenshots](#screenshots)
-- [📜 Acknowledgment](#Acknowledgment)
 - [🛠 Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
@@ -20,6 +25,7 @@
 - [🧪 Testing Requirements](#testing-requirements)
 - [🔧 Technical Requirements](#technical-requirements)
 - [👥 Authors](#authors)
+- [📜 Acknowledgment](#Acknowledgment)
 - [📜 License](#license)
 
 ## 📖 About the Project <a name="about-project"></a>
@@ -28,15 +34,27 @@ Welcome to 4Budget, your personal finance management application built with Ruby
 
 This project is inspired by the original design idea by Gregoire Vella on Behance, and it is used under the Creative Commons license.
 
-## 🎨 Design <a name="design"></a>
+## 🛠 Built With <a name="built-with"></a>
 
-4Budget follows a clean and intuitive design, emphasizing:
+### Tech Stack <a name="tech-stack"></a>
 
-- **Colors:** Utilizes a harmonious color scheme for a pleasant user experience.
-- **Typography:** Employs readable font faces, sizes, and weights for clear content presentation.
-- **Layout:** Ensures balanced composition and appropriate spacing between elements for a visually appealing interface.
+#### Client <a name="database"></a>
+- HTML5
+- CSS3
+- Boostrap
 
-- Credit to the original design idea goes to Gregoire Vella, and appropriate credit is given in compliance with the Creative Commons license.
+#### Server <a name="server"></a>
+- Ruby on Rails
+
+#### Database <a name="client"></a>
+- PostgreSQL
+
+### Key Features <a name="key-features"></a>
+
+- **Intuitive Expense Tracking:** Easily track and categorize your expenses, providing a clear overview of your financial health.
+- **Custom Categories:** Create custom spending categories tailored to your unique financial habits.
+- **Insightful Data:** Get a clear picture of your spending habits with insightful data and visualizations.
+  
 
 ## 💻 Live Demo  <a name="live-demo"></a>
 
@@ -48,10 +66,6 @@ This project is inspired by the original design idea by Gregoire Vella on Behanc
 ![Alt text](image-1.png)
 ![Alt text](image-2.png)
 ![Alt text](image-3.png)
-
-### Acknowledgment <a name="Acknowledgment"></a>
-
-We would like to express our deepest gratitude to **Gregoire Vella**, the talented app designer who contributed significantly to the visual and user experience aspects of this project. His creative insights and dedication played a crucial role in shaping the design of our application. We are truly thankful for his expertise and valuable contributions.
 
 ### 🛠 Setup <a name="setup"></a>
 
@@ -163,6 +177,10 @@ Comprehensive unit and integration tests are implemented for all essential compo
 👤 **Pablo Bonasera**
 - GitHub: [@PabloBona](https://github.com/PabloBona)
 - LinkedIn: [Pablo Bonasera](https://www.linkedin.com/in/pablo-bonasera/)
+
+### Acknowledgment <a name="Acknowledgment"></a>
+
+We would like to express our deepest gratitude to [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance for her Original design [idea](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=).
 
 ## 📜 License <a name="license"></a>
 
