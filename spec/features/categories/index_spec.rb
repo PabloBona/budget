@@ -5,7 +5,7 @@ describe "Visit the index page of 'categories'", type: :feature do
   before do
     user = FactoryBot.create(:user)
     login_as(user)
-    @categories = FactoryBot.create_list(:category, 5, user: user)
+    @categories = FactoryBot.create_list(:category, 5, user:)
     visit categories_path
   end
 

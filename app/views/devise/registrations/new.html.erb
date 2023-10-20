@@ -6,13 +6,7 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
         <div class="text-center log-input mt-2">
-          <div class="field input-group">
-            <div class="input-group-prepend">
-              <box-icon name='user-circle' type='solid' color='#ccc' class="user-icon"></box-icon>
-            </div>
-            <%= f.file_field :photo, autofocus: true, autocomplete: "photo", class: "custom-input custom-input-email px-5 py-4 rounded-0 w-100" %>
-          </div>
-
+  
           <div class="field mt-2">
             <%= f.text_field :name, autocomplete: "name", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "Full Name" %>
           </div>
