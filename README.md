@@ -63,7 +63,7 @@ This project is inspired by the original design idea by Gregoire Vella on Behanc
 ![Alt text](image-3.png)
 
 
-### 💻 Getting Started  <a name="started"></a>
+## 💻 Getting Started  <a name="started"></a>
 
 ### 🛠 Setup <a name="setup"></a>
 
@@ -139,15 +139,15 @@ We are committed to continuous improvement and plan to implement the following f
 
 - **Multi-Platform Support:** Extend 4Budget's accessibility by developing mobile applications for both Android and iOS platforms. This will enable users to manage their finances seamlessly on their smartphones and tablets, providing a consistent experience across devices.
 
-### 🤝 Contributing <a name="contributing"></a>
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-### ⭐️ Show your support <a name="support"></a>
+## ⭐️ Show your support <a name="support"></a>
 
 Give a ⭐️ if you like this project!
 
-### 🙏 Acknowledgment <a name="Acknowledgment"></a>
+## 🙏 Acknowledgment <a name="Acknowledgment"></a>
 
 We would like to express our deepest gratitude to [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance for her Original design [idea](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=).
 
