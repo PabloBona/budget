@@ -1,0 +1,230 @@
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@300;600&display=swap');
+
+:root {
+  --main: #3778c2;
+  --second: #5fb523;
+  --color-text: #434b54;
+  --light-fuente: 'proxima-nova', sans-serif;
+  --header-height: 60px;
+}
+
+body {
+  font-family: 'Proxima Nova Extra Condensed', sans-serif;
+  background-color: #f0f2f1;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.logout-btn {
+  background-color: inherit;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.letter-spacing {
+  letter-spacing: 0.5px;
+}
+
+.title {
+  height: 60vh !important;
+}
+
+.snap {
+  color: var(--color-text);
+  font-size: 3rem;
+  user-select: none;
+  font-style: italic;
+  font-family: var(--light-fuente);
+}
+
+.user-btn a {
+  transition: background-color 1s, color 1s;
+}
+
+.user-btn a:hover {
+  background-color: var(--main);
+  color: white;
+}
+
+.section-title {
+  font-weight: 700;
+}
+
+h2.log-title,
+.bg-blue {
+  background-color: #3778c2;
+}
+
+.log-title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.custom-input {
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.custom-input::placeholder {
+  color: #ccc;
+  padding: 0.5rem;
+}
+
+.forgot-text {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.arrow-back {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.user-icon {
+  position: absolute;
+  margin-top: 29px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.photo {
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  width: 100px;
+}
+
+.bg-user-show {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(87deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 5%, rgba(0, 212, 255, 1) 100%);
+  color: white;
+  font-size: 16px;
+  height: 100vh;
+}
+
+.input-width {
+  width: 75px;
+}
+
+.align-custom {
+  align-items: baseline;
+  border: 2px solid white;
+}
+
+/* Transaction */
+.bg-grey {
+  background-color: #f1f1f1;
+}
+
+/* Btn Succes */
+.btn-green {
+  color: #fff;
+  background-color: var(--second);
+  border-color: var(--second);
+}
+
+.btn-green:hover {
+  color: #fff;
+  background-color: var(--second);
+  border-color: var(--second);
+}
+
+.btn-green:focus,
+.btn-green.focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.btn-green.disabled,
+.btn-green:disabled {
+  background-color: var(--second);
+  border-color: var(--second);
+}
+
+.zoom-on-hover {
+  color: red;
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.zoom-on-hover:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.shadow:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* new */
+
+.site-content {
+  padding-bottom: 80px;
+}
+
+.sticky-after-header {
+  position: sticky;
+  top: var(--header-height);
+}
+
+header.app-header {
+  height: var(--header-height);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header.app-header .actions {
+  width: 40px;
+  height: 22px;
+}
+
+header.app-header h2 {
+  flex: 1;
+  text-align: center;
+}
+
+header.app-header .actions:last-child {
+  text-align: right;
+}
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.payment-list li {
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 1rem;
+}
+
+.payment-list li:last-child {
+  border-bottom: none;
+}

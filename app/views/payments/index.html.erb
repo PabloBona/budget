@@ -1,0 +1,43 @@
+<%= render "shared/header", title: 'PAYMENTS', icon: 'arrow-back', link: root_path, logout: true %>
+
+<div class="bg-white rounded-2 rounded-top-0 py-1 sticky-after-header shadow">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="d-flex justify-content-around">
+        <p>Payments for <%= @category.name %></p>
+        <p>Total Amount: <%= @total_amount %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid site-content mt-3">
+  <div class="row">
+    <div class="col">
+      <div id="payments" class="d-flex flex-column gap-3">
+        <% @payments.each do |payment| %>
+          <ul class="bg-white border-0 list-unstyled p-3 rounded-2 shadow mb-0 d-flex flex-column gap-3 payment-list">
+            <li class="dotted">
+              <%= payment.name.titleize %>
+            </li>
+            <li>
+              Date: <%= payment.created_at.strftime("%Y-%m-%d") %>
+            </li>
+            <li>
+                <div class="d-flex justify-content-between">
+                <p>TOTAL PAYMENT:</p>
+                <p class=""><%=number_to_currency(payment.amount) %></p>
+                </div>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-container">
+  <div class="btn-green p-2">
+     <%= link_to "Add a New Transaction", new_category_payment_path(@category), class:"border-light btn btn-green w-100" %>
+  </div>
+<div>

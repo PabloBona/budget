@@ -1,0 +1,10 @@
+  <div class="container pt-4 bg-user-show">
+    <div class="row"> 
+      <div class="col">
+        <h1>Editing user</h1>
+        <%= render "form", user: @user %>
+        <%= link_to "Show this user", @user %> |
+        <%= link_to "Back to users", users_path %>
+      </div>
+    </div>
+  </div>

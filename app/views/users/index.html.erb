@@ -1,0 +1,37 @@
+  <div class="container pt-4 bg-user-show">
+    <div class="row"> 
+      <div class="col">
+        <div class="d-flex justify-content-center my-2">
+          <div class="rounded-circle text-center photo" style="background-image: url('<%= @user.photo.url %>')" >
+            <% if @user.photo.present? %>
+              <%= image_tag @user.photo.url, alt: "User Photo", class: "d-none" %> <!-- Esta línea oculta la imagen, pero sigue siendo utilizada para obtener la URL de la foto -->
+            <% else %>
+              <%= image_tag "/uploads/no-photo.jpg", alt: "User Photo", class: "d-none" %> <!-- Esta línea oculta la imagen de no-photo.jpg, pero sigue siendo utilizada para obtener la URL de la imagen por defecto -->
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col text-center">
+      <h2><%= @user.name %></h2>
+    </div>
+    <div class="mt-5">
+      <ul class="list-unstyled">
+        <li class="d-flex gap-3">
+          <box-icon name='cog' class="border rounded-circle" color='#ffffff'></box-icon>
+          <%= link_to "Account settings", edit_user_path(@user), class: "text-decoration-none text-white cursor-pointer" %>
+        </li>
+        <div class="mx-auto w-75"><hr class="text-ligth"></div>
+
+        <li class="d-flex gap-3"><box-icon name='map' class="border rounded-circle" color='#ffffff' ></box-icon> Merchant Finder</li>
+        <div class="mx-auto w-75"><hr class="text-ligth"></div>
+        <li class="d-flex gap-3"><box-icon name='gift' class="border rounded-circle" color='#ffffff' ></box-icon> Claim Promo</li>
+        <div class="mx-auto w-75"><hr class="text-ligth"></div>
+        <li class="d-flex gap-3"><box-icon name='export' class="border rounded-circle" color='#ffffff' ></box-icon> Share Promo</li>
+        <div class="mx-auto w-75"><hr class="text-ligth"></div>
+      </ul>
+    </div>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete , class:"btn end-0 mt-1 mx-1 position-absolute text-bg-warning top-0" %>
+  </div>
+
+

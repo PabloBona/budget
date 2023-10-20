@@ -1,0 +1,33 @@
+<%= render "shared/header", title: 'REGISTER', icon: 'arrow-back', link: root_path, logout: false %>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="text-center log-input mt-2">
+  
+          <div class="field mt-2">
+            <%= f.text_field :name, autocomplete: "name", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "Full Name" %>
+          </div>
+
+          <div class="field mt-2">
+            <%= f.email_field :email, autocomplete: "email", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "Email" %>
+          </div>
+
+          <div class="field mt-2">
+            <%= f.password_field :password, autocomplete: "new-password", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "Password" %>
+          </div>
+
+          <div class="field mt-2">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "custom-input custom-input-email w-100 rounded-0", placeholder: "Confirm Password" %>
+          </div>
+
+          <div class="actions my-2">
+            <%= f.submit "Sign up", class:"btn btn-primary px-5" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

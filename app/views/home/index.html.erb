@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+  redirect_to user_path(current_user)
+<% else %>
+
+<div class="container-fluid">
+  <div class="align-items-center d-flex justify-content-center title">
+    <div class="row">
+      <div class="col text-center">
+        <h2 class="snap">4BudGet</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <%= link_to "LOG IN", new_user_session_path, class: "btn btn-primary fs-4 p-3 rounded-0 w-100" %>
+      <%= link_to "SIGN UP", new_user_registration_path, class: "btn fs-4 p-3 rounded-0 w-100" %>
+    </div>
+  </div>
+</div>
+
+<% end %>
